@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aufbruch in eine neue Zeit</title>
+<meta name="description" content="GPG 7. Klasse, Förderschwerpunkt Lernen: Buchdruck, neue Wege, Kolumbus, Inka und die Folgen. Präsentationen, Arbeitsblätter, Hausaufgaben und Hefteinträge.">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<meta name="theme-color" content="#F4F7F2">
+<style>@font-face{font-family:'Andika';src:url(assets/Andika-Regular.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Andika';src:url(assets/Andika-Bold.woff2) format('woff2');font-weight:700;font-display:swap}
+:root{
+  --grund:#F4F7F2; --papier:#FFFFFF; --gruen:#1F4D33; --gruen-mittel:#2F6B45; --grau:#5A665E;
+  --gold:#E2B04A; --gold-hell:#F6E7C1; --linie:#DCE5DD; --rot:#B23A3A;
+  --font:'Andika',Verdana,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--grund);color:var(--gruen);font-family:var(--font);font-size:17px;line-height:1.7;-webkit-text-size-adjust:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gruen);outline-offset:3px;border-radius:6px}
+.fortschritt{position:fixed;inset:0 0 auto 0;height:6px;z-index:50}
+.fortschritt span{display:block;height:100%;width:0;background:var(--gold);border-radius:0 6px 6px 0;transition:width .12s linear}
+.nav-wrap{position:sticky;top:12px;z-index:40;display:flex;justify-content:center;padding:0 12px;margin-top:12px}
+nav{display:flex;gap:4px;max-width:100%;overflow-x:auto;background:var(--papier);border:1.5px solid var(--linie);border-radius:999px;padding:5px;box-shadow:0 2px 10px rgba(31,77,51,.07);scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;text-decoration:none;font-size:15px;min-height:44px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px}
+nav a:hover{background:var(--grund)}
+nav a.aktiv{background:var(--gold);font-weight:700}
+main{max-width:780px;margin:0 auto;padding:0 20px 80px}
+.hero{padding:56px 0 24px;display:grid;grid-template-columns:1fr 230px;gap:28px;align-items:center}
+.hero img{width:230px;height:auto;border-radius:18px;border:1.5px solid var(--linie);box-shadow:0 8px 24px rgba(31,77,51,.12)}
+.kicker{font-size:14px;color:var(--grau);letter-spacing:.02em;margin:0 0 8px}
+h1{font-size:clamp(36px,7.5vw,56px);line-height:1.05;margin:0 0 16px;letter-spacing:-.01em}
+h1 mark{background:linear-gradient(transparent 58%,var(--gold) 58%);color:inherit;padding:0 2px}
+.lead{font-size:19px;margin:0 0 22px;max-width:36ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0;list-style:none}
+.chips li{background:var(--papier);border:1.5px solid var(--linie);border-radius:999px;padding:4px 14px;font-size:14px}
+.knoepfe{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:52px;padding:0 22px;border-radius:14px;border:2px solid var(--gruen);background:var(--papier);color:var(--gruen);font:inherit;font-size:16px;text-decoration:none;cursor:pointer;transition:transform .12s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.gelb{background:var(--gold)}
+.btn.klein{min-height:46px;padding:0 16px;font-size:15px;border-width:1.5px;border-radius:12px}
+.btn small{font-size:12px;color:var(--grau)}
+section{padding:56px 0 0}
+h2{font-size:clamp(26px,5vw,34px);line-height:1.2;margin:0 0 8px}
+.unter{color:var(--grau);margin:0 0 24px;max-width:56ch}
+.plan{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0;padding:0;list-style:none}
+.plan a{display:block;text-decoration:none;background:var(--papier);border:1.5px solid var(--linie);border-radius:16px;padding:14px 12px 12px;height:100%;transition:border-color .12s,transform .12s}
+.plan a:hover{border-color:var(--gruen);transform:translateY(-2px)}
+.plan b{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);margin-bottom:8px}
+.plan span{display:block;font-size:15px;line-height:1.35}
+.stunde{background:var(--papier);border:1.5px solid var(--linie);border-radius:22px;padding:28px 26px 26px}
+.stunde-kopf{display:flex;align-items:center;gap:14px;margin-bottom:4px}
+.badge{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--gold);font-weight:700;font-size:20px}
+.stunde h2{margin:0}
+.buch{margin:0 0 4px 60px;color:var(--grau);font-size:15px}
+.ziel{margin:10px 0 14px}
+.ablauf{margin:0 0 18px;padding-left:22px}
+.ablauf li{margin:2px 0}
+.material{display:grid;gap:10px;margin:0 0 18px;padding:0;list-style:none}
+.material li,.fuerdich li{display:grid;grid-template-columns:1fr auto;gap:10px 14px;align-items:center;border:1.5px solid var(--linie);border-radius:14px;padding:12px 14px;background:var(--grund)}
+.material strong,.fuerdich strong{display:block;line-height:1.35}
+.material small,.fuerdich small{display:block;color:var(--grau);font-size:14px;line-height:1.45}
+.aktionen{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.zip-zeile{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.inarbeit{margin:0;padding:12px 16px;border-radius:12px;background:var(--gold-hell);display:inline-block}
+.fuerdich{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.fuerdich li{background:var(--papier)}
+.hinweis{background:var(--gold-hell);border-radius:16px;padding:16px 20px;margin-top:20px}
+.hinweis p{margin:0}
+.hinweis p+p{margin-top:8px}
+details{margin-top:16px;background:var(--papier);border:1.5px solid var(--linie);border-radius:14px;padding:10px 16px}
+summary{cursor:pointer;font-weight:700}
+.nachweise{font-size:14px;color:var(--grau);padding-left:20px}
+footer{max-width:780px;margin:0 auto;padding:0 20px 56px;color:var(--grau);font-size:14px}
+@media (max-width:640px){
+  body{font-size:16px}
+  .hero{grid-template-columns:1fr;padding-top:36px}
+  .hero img{width:100%;max-width:320px;order:-1}
+  .plan{grid-template-columns:1fr 1fr}
+  .stunde{padding:22px 18px}
+  .buch{margin-left:0}
+  .material li,.fuerdich li{grid-template-columns:1fr}
+  .aktionen{justify-content:flex-start}
+}
+@media print{.fortschritt,.nav-wrap,.knoepfe,.btn{display:none!important}body{background:#fff}.stunde{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="fortschritt" aria-hidden="true"><span id="balken"></span></div>
+
+<div class="nav-wrap">
+<nav aria-label="Abschnitte">
+  <a href="#start">Start</a>
+  <a href="#stunde-1">Stunde 1</a><a href="#stunde-2">Stunde 2</a><a href="#stunde-3">Stunde 3</a><a href="#stunde-4">Stunde 4</a><a href="#stunde-5">Stunde 5</a>
+  <a href="#fuer-dich">Für dich</a>
+</nav>
+</div>
+
+<main>
+<header class="hero" id="start">
+  <div>
+    <p class="kicker">Förderschwerpunkt Lernen · 7. Klasse · GPG</p>
+    <h1>Aufbruch in eine <mark>neue Zeit</mark></h1>
+    <p class="lead">Buchdruck, Seefahrer, Kolumbus und die Inka. Fünf Stunden über die Zeit um 1500.</p>
+    <ul class="chips">
+      <li>5 Stunden + Probe</li>
+      <li>Präsentation, Papier und iPad</li>
+      <li>nach Stark in Gesellschaftslehre 2</li>
+    </ul>
+    <div class="knoepfe">
+      <a class="btn gelb" href="#stunde-1">Mit Stunde 1 starten</a>
+      <a class="btn" href="download/Neuzeit-Alles.zip" download>Alles als ZIP laden</a>
+    </div>
+  </div>
+  <img src="assets/weltkarte-1489.jpg" alt="Alte Weltkarte von 1489. Amerika fehlt noch." width="230" height="160">
+</header>
+
+<section aria-labelledby="plan-titel">
+  <h2 id="plan-titel">Der Plan</h2>
+  <p class="unter">Jede Stunde hat einen eigenen Abschnitt mit Präsentation und allen Blättern zum Öffnen, Drucken und Herunterladen.</p>
+  <ol class="plan"><li><a href="#stunde-1"><b>1</b><span>Der Buchdruck</span></a></li><li><a href="#stunde-2"><b>2</b><span>Neue Ideen, neue Wege</span></a></li><li><a href="#stunde-3"><b>3</b><span>Kolumbus und die Entdeckung Amerikas</span></a></li><li><a href="#stunde-4"><b>4</b><span>Die Inka</span></a></li><li><a href="#stunde-5"><b>5</b><span>Folgen bis heute</span></a></li></ol>
+</section>
+
+<section id="stunde-1" aria-labelledby="st1-titel"><div class="stunde"><div class="stunde-kopf"><span class="badge" aria-hidden="true">1</span><h2 id="st1-titel">Stunde 1: Der Buchdruck</h2></div><p class="buch">Buch S. 36–38</p><p class="ziel">Die Kinder erklären, warum der Buchdruck um 1450 die Welt verändert hat.</p><ul class="ablauf"><li>Kapitelstart und Zeitstrahl</li><li>Bildimpuls: Mönch in der Schreibstube</li><li>Gutenberg und die Lettern</li><li>Druckschritte ordnen, Stempelaktion</li><li>Hefteintrag</li></ul><ul class="material"><li><div><strong>Präsentation</strong><small>Folien mit Sprechernotizen. In Canva kannst du selbst ändern.</small></div><div class="aktionen"><a class="btn klein gelb" href="https://canva.link/ckhq5uky4dgtum7" target="_blank" rel="noopener">In Canva öffnen</a><a class="btn klein" href="download/UE1-Folien-Buchdruck.pptx" download>PowerPoint laden <small>(18.8 MB)</small></a><a class="btn klein" href="download/UE1-Folien-Buchdruck-Canva.pdf" download>Folien als PDF <small>(10.4 MB)</small></a></div></li><li><div><strong>Hausaufgabe 1: Der Buchdruck</strong><small>Ankreuzen, Druckschritte ordnen, Lückentext, ein Erklärsatz. · 2 Seiten</small></div><div class="aktionen"><a class="btn klein gelb" href="material/UE1-Hausaufgabe-Buchdruck.html" target="_blank" rel="noopener">Öffnen und drucken</a><a class="btn klein" href="pdf/UE1-Hausaufgabe-Buchdruck.pdf" download>PDF laden</a></div></li><li><div><strong>Hefteintrag zum Einkleben</strong><small>Lückenstreifen mit Wörterbox, zwei Streifen pro Seite. · 1 Seite</small></div><div class="aktionen"><a class="btn klein gelb" href="material/UE1-Hefteintrag-Buchdruck.html" target="_blank" rel="noopener">Öffnen und drucken</a><a class="btn klein" href="pdf/UE1-Hefteintrag-Buchdruck.pdf" download>PDF laden</a></div></li></ul><div class="zip-zeile"><a class="btn klein" href="download/Neuzeit-Stunde-1.zip" download>Stunde 1 als ZIP</a></div></div></section><section id="stunde-2" aria-labelledby="st2-titel"><div class="stunde"><div class="stunde-kopf"><span class="badge" aria-hidden="true">2</span><h2 id="st2-titel">Stunde 2: Neue Ideen, neue Wege</h2></div><p class="buch">Buch S. 40–41</p><p class="ziel">Die Kinder nennen Gründe, warum die Europäer einen Seeweg nach Indien suchten.</p><ul class="ablauf"><li>Scheibe oder Kugel?</li><li>Karavelle und Kompass</li><li>Alte Weltkarte von 1489</li><li>Seide und Gewürze: Landweg oder Seeweg</li><li>Hefteintrag</li></ul><ul class="material"><li><div><strong>Hausaufgabe 2: Neue Ideen, neue Wege</strong><small>Verbinden, Richtig/Falsch, alte Weltkarte, ein Erklärsatz. · 2 Seiten</small></div><div class="aktionen"><a class="btn klein gelb" href="material/UE2-Hausaufgabe-Neue-Wege.html" target="_blank" rel="noopener">Öffnen und drucken</a><a class="btn klein" href="pdf/UE2-Hausaufgabe-Neue-Wege.pdf" download>PDF laden</a></div></li></ul><div class="zip-zeile"><a class="btn klein" href="download/Neuzeit-Stunde-2.zip" download>Stunde 2 als ZIP</a></div></div></section><section id="stunde-3" aria-labelledby="st3-titel"><div class="stunde"><div class="stunde-kopf"><span class="badge" aria-hidden="true">3</span><h2 id="st3-titel">Stunde 3: Kolumbus und die Entdeckung Amerikas</h2></div><p class="buch">Buch S. 42–44</p><p class="ziel">Die Kinder erzählen die Reise von 1492 nach und erklären den Irrtum mit Indien.</p><ul class="ablauf"><li>Kurzfilm Kolumbus 1492</li><li>Die Santa María erkunden</li><li>Tagebuch des Kolumbus</li><li>Indien oder Amerika?</li></ul><p class="inarbeit">Material in Arbeit.</p></div></section><section id="stunde-4" aria-labelledby="st4-titel"><div class="stunde"><div class="stunde-kopf"><span class="badge" aria-hidden="true">4</span><h2 id="st4-titel">Stunde 4: Die Inka</h2></div><p class="buch">Buch S. 48–51</p><p class="ziel">Die Kinder beschreiben die Hochkultur der Inka und was die Spanier mit ihr gemacht haben.</p><ul class="ablauf"><li>Machu Picchu</li><li>Merkmale einer Hochkultur</li><li>Der Inkastaat</li><li>Der Untergang der Inka</li></ul><p class="inarbeit">Material in Arbeit.</p></div></section><section id="stunde-5" aria-labelledby="st5-titel"><div class="stunde"><div class="stunde-kopf"><span class="badge" aria-hidden="true">5</span><h2 id="st5-titel">Stunde 5: Folgen bis heute</h2></div><p class="buch">Buch S. 52–54</p><p class="ziel">Die Kinder erklären, warum viele die Entdeckung Amerikas eine Eroberung nennen.</p><ul class="ablauf"><li>Sklavenhandel und Dreieckshandel</li><li>Die 500-Jahr-Feier 1992</li><li>Lateinamerika heute</li><li>Kahoot zur Wiederholung</li></ul><p class="inarbeit">Material in Arbeit.</p></div></section>
+
+<section id="fuer-dich" aria-labelledby="dich-titel">
+  <h2 id="dich-titel">Für dich</h2>
+  <p class="unter">Gesamtpaket und Hinweise. Die Probe liegt nicht hier, sondern nur auf deinem Rechner.</p>
+  <ul class="fuerdich">
+    <li><div><strong>Alles in einem ZIP</strong><small>Alle Präsentationen und PDFs, die es bisher gibt.</small></div><div class="aktionen"><a class="btn klein" href="download/Neuzeit-Alles.zip" download>ZIP laden</a></div></li>
+  </ul>
+  <div class="hinweis">
+    <p><strong>Stand:</strong> Die Seite wächst mit. Stunden ohne Material sind noch in Arbeit.</p>
+    <p>Lehrplanbezug: LehrplanPLUS Bayern, Förderschule, Förderschwerpunkt Lernen, GPG/NT, Lernbereich 3 Zeit und Wandel. <a href="https://www.lehrplanplus.bayern.de/fachlehrplan/foerderschule/5_6_7_8_9/gpg_nt/foerderschwerpunkt/lernen" rel="noopener">Zum Lehrplan</a></p>
+  </div>
+  <details>
+    <summary>Bildnachweise</summary>
+    <p>Die Bilder auf den Arbeitsblättern stammen von Wikimedia Commons. Einige Bilder in den Canva-Präsentationen sind mit KI erzeugt und keine historischen Quellen.</p>
+    <ul class="nachweise"><li>Schreiber Jean Miélot am Schreibpult, Buchmalerei um 1456: Jean Le Tavernier, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Tavernier_Jean_Mielot.jpg" rel="noopener">Wikimedia Commons</a></li><li>Gutenberg-Bibel, Anfang Buch Genesis, um 1455: Johannes Gutenberg (Druck), Scan: Jossi, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Gutenberg_Bible_B42_Genesis_cropped.jpg" rel="noopener">Wikimedia Commons</a></li><li>&quot;Der Buchdrucker&quot;, Holzschnitt aus dem Ständebuch 1568: Jost Amman, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Buchdrucker-1568.png" rel="noopener">Wikimedia Commons</a></li><li>Johannes Gutenberg, Kupferstich (17. Jh., Fantasiebildnis): Nicolas de Larmessin, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Johannes_Gutenberg.jpg" rel="noopener">Wikimedia Commons</a></li><li>Flammarions Holzstich: Wanderer schaut über den Rand der Welt (1888): unbekannt, veröffentlicht von Camille Flammarion, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Flammarion.jpg" rel="noopener">Wikimedia Commons</a></li><li>Behaims &quot;Erdapfel&quot;, ältester erhaltener Globus (1492), Foto: Globus: Martin Behaim / Georg Glockendon; Foto: Germanisches Nationalmuseum (Upload 2019), CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Erdglobus,_sogenannter_Behaim-Globus.jpg" rel="noopener">Wikimedia Commons</a></li><li>Nachbau der Karavelle &quot;Boa Esperança&quot; im Hafen von Lagos (Portugal): Norbert Nagel, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Boa_Esperan%C3%A7a_caravel_replica_moored_in_Lagos_-_Portugal_-_2015-08-06.jpg" rel="noopener">Wikimedia Commons</a></li><li>Kompassrose (Windrose) eines Seekompasses, Kupferstich 1747/48: Emanuel Bowen (via Geographicus), gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Compass_rose_detail_from_1748_Bowen_Mariner%E2%80%99s_Compass_and_Armillary_Sphere_-_Geographicus_-_CircleofWinds-bowen-1747_(cropped).jpg" rel="noopener">Wikimedia Commons</a></li><li>Echter Schiffskompass von 1545 aus dem Wrack der Mary Rose (Holzkasten, Nadel fehlt): Tim Sheerman-Chase, CC BY 4.0, <a href="https://commons.wikimedia.org/wiki/File:Gimballed_Compass,_Mary_Rose_-_55129422442.jpg" rel="noopener">Wikimedia Commons</a></li><li>Weltkarte des Henricus Martellus, um 1489 (ohne Amerika): Henricus Martellus Germanus; British Library, CC0, <a href="https://commons.wikimedia.org/wiki/File:World_map_by_Martellus_-_Account_of_the_Islands_of_the_Mediterranean_(1489),_ff.68v-69_-_BL_Add_MS_15760.jpg" rel="noopener">Wikimedia Commons</a></li><li>Bildnis eines Mannes, vermutlich Christoph Kolumbus (1519): Sebastiano del Piombo; Metropolitan Museum of Art, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Portrait_of_a_Man,_Said_to_be_Christopher_Columbus.jpg" rel="noopener">Wikimedia Commons</a></li><li>Nachbau der &quot;Santa María&quot; unter Segeln, Clearwater (Florida) 2005: Xrzt, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Santa_Maria_replica_ship.jpg" rel="noopener">Wikimedia Commons</a></li><li>&quot;Die Landung des Kolumbus&quot; (1847), Gemälde im US-Kapitol: John Vanderlyn; Foto: Architect of the Capitol, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Flickr_-_USCapitol_-_Landing_of_Columbus_(1).jpg" rel="noopener">Wikimedia Commons</a></li><li>Karte der vier Reisen des Kolumbus, erste Reise blau (englisch beschriftet): Phirosiberia, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/wiki/File:Viajes_de_colon_en.svg" rel="noopener">Wikimedia Commons</a></li><li>Gewürzsäcke auf einem Markt (Paprika, Kurkuma u. a.), Tunesien: Bernard Gagnon, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/wiki/File:Spices_market_Medenine.jpg" rel="noopener">Wikimedia Commons</a></li><li>Seidenstoffe (Dupion-Seide): Smriti Tripathi, CC BY 3.0, <a href="https://commons.wikimedia.org/wiki/File:Indian-dupioni-silk-fabrics.JPG" rel="noopener">Wikimedia Commons</a></li><li>Ferdinand von Aragón und Isabella von Kastilien, Doppelbildnis 15. Jh.: unbekannter Maler, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Ferdinand_of_Aragon,_Isabella_of_Castile.jpg" rel="noopener">Wikimedia Commons</a></li><li>Amerigo Vespucci, Bildnis mit Inschrift &quot;Americus Vespucci&quot;: unbekannt; Library of Congress, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Amerigo_Vespucci,_1451-1512_LCCN2004672768.jpg" rel="noopener">Wikimedia Commons</a></li><li>Machu Picchu, Peru: Pedro Szekely, CC BY-SA 2.0, <a href="https://commons.wikimedia.org/wiki/File:Machu_Picchu,_Peru.jpg" rel="noopener">Wikimedia Commons</a></li><li>Kreisförmige Anbauterrassen der Inka in Moray, Peru: McKay Savage, CC BY 2.0, <a href="https://commons.wikimedia.org/wiki/File:Peru_-_Sacred_Valley_%26_Incan_Ruins_284_-_Moray_(8118168211).jpg" rel="noopener">Wikimedia Commons</a></li><li>Inka-Bauern pflügen mit dem Fußpflug (Monat August), Zeichnung 1615: Felipe Guamán Poma de Ayala, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Guam%C3%A1n_Poma_1615_1153_agosto.png" rel="noopener">Wikimedia Commons</a></li><li>Atahualpa, der 14. Inka-Herrscher, Gemälde (Cusco, 18. Jh.): unbekannter Maler; Brooklyn Museum, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Atahualpa,_Fourteenth_Inca,_1_of_14_Portraits_of_Inca_Kings_-_overall.jpg" rel="noopener">Wikimedia Commons</a></li><li>Kleines Lama aus Gold, Inka 1400 bis 1533, Museo de América Madrid: Dorieo, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Figura_inca_de_oro_que_representa_una_llama._1400-1533_d._C._Museo_de_Am%C3%A9rica_01.jpg" rel="noopener">Wikimedia Commons</a></li><li>Ausdehnung des Inkareichs 1438 bis 1533 nach Herrschern: ohne Angabe (Wikipedia-Karte), gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Inca-expansion.png" rel="noopener">Wikimedia Commons</a></li><li>Atlantischer Dreieckshandel, deutsch beschriftet (Pfeile, Waren): SiMon, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Atlantischer_Dreieckshandel.png" rel="noopener">Wikimedia Commons</a></li><li>Dreieckshandel ohne Beschriftung und ohne Pfeile (zum Selbstbeschriften): Sémhur, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/wiki/File:Triangular_trade.png" rel="noopener">Wikimedia Commons</a></li><li>Plan des Sklavenschiffs &quot;Brookes&quot; (1788), Flugblatt gegen den Sklavenhandel: Plymouth-Gruppe der Gesellschaft zur Abschaffung des Sklavenhandels; Library of Congress, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Slaveshipposter.jpg" rel="noopener">Wikimedia Commons</a></li><li>Gewebte Pullover und Ponchos am Kunsthandwerkermarkt in Otavalo, Ecuador: David Adam Kess, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/wiki/File:Otavalo_Artisan_Market_-_Andes_Mountains_-_South_America_-_photograph_018.JPG" rel="noopener">Wikimedia Commons</a></li><li>Weberin in Tracht am Gurtwebstuhl, Pisac (Peru): Rodolfo Pimentel, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/wiki/File:Tejedora_en_Pisac.jpg" rel="noopener">Wikimedia Commons</a></li><li>Leere Weltkarte mit Ländergrenzen (grau): Canuckguy und weitere, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:BlankMap-World.svg" rel="noopener">Wikimedia Commons</a></li><li>Leere Umrisskarte Nordatlantik (Globusansicht, Europa, Afrika, Amerika): Paxicoscolon, CC0, <a href="https://commons.wikimedia.org/wiki/File:North_Atlantic_Blank.png" rel="noopener">Wikimedia Commons</a></li></ul>
+  </details>
+</section>
+</main>
+
+<footer>
+  <p>Aufbruch in eine neue Zeit. Die Seite ist öffentlich erreichbar, enthält aber keine Schülerdaten.</p>
+</footer>
+
+<script>
+(function(){
+  var balken=document.getElementById('balken');
+  function fortschritt(){
+    var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+    balken.style.width=(max>0?Math.min(100,h.scrollTop/max*100):0)+'%';
+  }
+  window.addEventListener('scroll',fortschritt,{passive:true});
+  window.addEventListener('resize',fortschritt);
+  fortschritt();
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('aktiv',a.getAttribute('href')==='#'+e.target.id)})}
+      });
+    },{rootMargin:'-30% 0px -60% 0px'});
+    links.forEach(function(a){var z=document.querySelector(a.getAttribute('href'));if(z)io.observe(z)});
+  }
+})();
+</script>
+</body>
+</html>
